@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Get a YouTube API Key</title>
+    <style>
+        /* Gradient Background */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header Styling */
+        h1 {
+            text-align: center;
+            margin: 40px 20px 20px 20px;
+            font-size: 2.5em;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        /* Container for Steps */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        /* Individual Step Styling */
+        .step {
+            background: rgba(255, 255, 255, 0.2);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideInUp 0.8s forwards;
+        }
+
+        .step:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .step:nth-child(2) {
+            animation-delay: 0.6s;
+        }
+
+        .step:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+
+        .step:nth-child(4) {
+            animation-delay: 1.2s;
+        }
+
+        .step:nth-child(5) {
+            animation-delay: 1.5s;
+        }
+
+        .step:nth-child(6) {
+            animation-delay: 1.8s;
+        }
+
+        .step-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ffdd57;
+            margin-bottom: 10px;
+        }
+
+        .step p, .step a {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        .step a {
+            color: #ffdd57;
+            text-decoration: underline;
+        }
+
+        /* Start Button Styling */
+        .btn {
+            display: block;
+            width: 150px;
+            margin: 30px auto 0 auto;
+            padding: 12px 20px;
+            background-color: #ffdd57;
+            color: #333;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e6c43e;
+            transform: scale(1.05);
+        }
+
+        /* Footer Styling */
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            width: 100%;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        footer a {
+            color: #ffdd57;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .step p, .step a {
+                font-size: 1em;
+            }
+
+            .btn {
+                width: 120px;
+                padding: 10px 16px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Step-by-Step Guide to Get Your YouTube API Key</h1>
+
+    <div class="container">
+        <div class="step">
+            <div class="step-number">Step 1:</div>
+            <p>Go to the <a href="https://console.developers.google.com/" target="_blank">Google Cloud Console</a>.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">Step 2:</div>
+            <p>Create a new project or select an existing project.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">Step 3:</div>
+            <p>In the dashboard, navigate to "APIs & Services" and click on "Enable APIs and Services".</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">Step 4:</div>
+            <p>Search for "YouTube Data API v3" and enable it.</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">Step 5:</div>
+            <p>Go to "Credentials" and click "Create Credentials", then select "API Key".</p>
+        </div>
+
+        <div class="step">
+            <div class="step-number">Step 6:</div>
+            <p>Your API Key will be generated. Copy and use it in your applications!</p>
+        </div>
+
+        <button class="btn" id="startBtn">Start Guide</button>
+    </div>
+
+    <footer>
+        &copy; 2024 Arjan Chaudhary | <a href="https://github.com/arjanchaudharyy" target="_blank">GitHub</a>
+    </footer>
+
+    <script>
+        // JavaScript to control the display of steps
+        const steps = document.querySelectorAll('.step');
+        const startBtn = document.getElementById('startBtn');
+
+        // Initially hide all steps
+        steps.forEach(step => {
+            step.style.display = 'none';
+        });
+
+        // Function to show steps one by one
+        function showSteps() {
+            let delay = 0;
+            steps.forEach((step, index) => {
+                setTimeout(() => {
+                    step.style.display = 'block';
+                }, delay);
+                delay += 1500; // 1.5 seconds delay between steps
+            });
+            // Hide the button after all steps are shown
+            setTimeout(() => {
+                startBtn.style.display = 'none';
+            }, delay);
+        }
+
+        // Add event listener to the button
+        startBtn.addEventListener('click', showSteps);
+    </script>
+
+</body>
+</html>
+
+
